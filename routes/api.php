@@ -8,16 +8,16 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 // Importa o Controller da Pessoa
-use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\alunoController;
  
 // Rota GET - usada para buscar/listar pessoas
 // Quando acessada, chama a função index() do Controller
-Route::get('/produtos', [ProdutoController::class, 'index']);
+Route::get('/alunos', [alunoController::class, 'index']);
  
 // Rota POST - usada para cadastrar uma pessoa
 // Quando acessada, chama a função store() do Controller
-Route::post('/produtos', [ProdutoController::class, 'store']);
+Route::post('/alunos', [alunoController::class, 'store']);
  
 // Rota DELETE - usada para excluir uma pessoa
 // Envia o ID para a função destroy() do Controller
-Route::delete('/produtos/{id}', [ProdutoController::class, 'destroy']);
+Route::delete('/alunos/{id}', [alunoController::class, 'destroy']);
