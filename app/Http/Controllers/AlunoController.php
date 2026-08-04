@@ -29,7 +29,7 @@ class AlunoController extends Controller
     }
 
     // Exclui um aluno pelo ID
-    public function destroy($id)
+    public function destroy( )
     {
         // Procura o aluno pelo ID
         $aluno = Aluno::find($id);
